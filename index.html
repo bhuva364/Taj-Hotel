@@ -18,6 +18,25 @@
 </head>
 <body>
 
+  <!-- Fixed navigation, collapses into a hamburger below 768px (see script.js) -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="#home" class="navbar__logo">Taj<span>Hotel</span></a>
+      <nav class="navbar__links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">Heritage</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#amenities">Amenities</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#testimonials">Guests Say</a>
+        <a href="#booking" class="navbar__cta">Book Now</a>
+      </nav>
+      <button class="navbar__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
   <!-- Page sections are injected below, one at a time as the site is built -->
 
   <script src="js/script.js"></script>
