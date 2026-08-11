@@ -167,6 +167,60 @@
     <div class="testimonial-dots" id="testimonialDots"></div>
   </section>
 
+  <!-- Booking: client-side validated form (no backend — see script.js) -->
+  <section class="booking" id="booking">
+    <div class="booking__inner">
+      <div class="booking__text">
+        <p class="eyebrow">Reserve</p>
+        <h2>Plan Your Stay</h2>
+        <p>Tell us your dates and we'll hold the room while you decide —
+          no payment is taken here.</p>
+      </div>
+      <form class="booking__form" id="bookingForm" novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="fullName">Full name</label>
+            <input type="text" id="fullName" name="fullName" required minlength="2" />
+            <span class="form-error" data-error-for="fullName"></span>
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+            <span class="form-error" data-error-for="email"></span>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="checkIn">Check-in</label>
+            <input type="date" id="checkIn" name="checkIn" required />
+            <span class="form-error" data-error-for="checkIn"></span>
+          </div>
+          <div class="form-field">
+            <label for="checkOut">Check-out</label>
+            <input type="date" id="checkOut" name="checkOut" required />
+            <span class="form-error" data-error-for="checkOut"></span>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="roomType">Room type</label>
+            <select id="roomType" name="roomType">
+              <option value="heritage">Heritage Room</option>
+              <option value="courtyard">Courtyard Suite</option>
+              <option value="maharaja">Maharaja Suite</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="guests">Guests</label>
+            <input type="number" id="guests" name="guests" min="1" max="6" value="2" />
+          </div>
+        </div>
+        <button type="submit" class="btn btn--gold btn--full">Request Reservation</button>
+        <p class="form-success" id="formSuccess" hidden>Thank you — your request has been noted. Our concierge will confirm by email shortly.</p>
+      </form>
+    </div>
+  </section>
+
   <!-- Page sections are injected below, one at a time as the site is built -->
 
   <script src="js/script.js"></script>
