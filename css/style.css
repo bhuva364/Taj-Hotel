@@ -261,3 +261,41 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 .contact__grid { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; text-align: center; }
 .contact__grid i { color: var(--color-gold); font-size: 1.3rem; margin-bottom: 0.6rem; }
 .contact__grid p { font-size: 0.9rem; color: rgba(255,255,255,0.8); }
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.footer { background: var(--color-maroon-dark); color: rgba(255,255,255,0.75); padding: 2.5rem 1.5rem; }
+.footer__inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+.footer .navbar__logo { color: var(--color-white); font-size: 1.2rem; }
+.footer__social { display: flex; gap: 1rem; }
+.footer__social a { color: var(--color-white); font-size: 1.1rem; transition: color var(--transition); }
+.footer__social a:hover { color: var(--color-gold); }
+.footer p { font-size: 0.8rem; }
+
+/* ============================================================
+   Responsive — tablet and mobile
+   ============================================================ */
+@media (max-width: 900px) {
+  .about { grid-template-columns: 1fr; }
+  .rooms__grid, .amenities__grid { grid-template-columns: repeat(2, 1fr); }
+  .booking__inner { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .navbar__links {
+    position: fixed; top: 0; right: -100%; height: 100vh; width: 74%;
+    background: var(--color-ivory); flex-direction: column; justify-content: center;
+    gap: 1.6rem; transition: right var(--transition); box-shadow: -10px 0 30px rgba(0,0,0,0.15);
+  }
+  .navbar__links.is-open { right: 0; }
+  .navbar__links a { color: var(--color-ink) !important; }
+  .navbar__toggle { display: flex; }
+  .navbar__toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .navbar__toggle.is-open span:nth-child(2) { opacity: 0; }
+  .navbar__toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .rooms__grid, .amenities__grid, .gallery__grid, .contact__grid, .form-row { grid-template-columns: 1fr; }
+  .about__stats { flex-wrap: wrap; gap: 1.5rem; }
+  .footer__inner { flex-direction: column; text-align: center; }
+}
