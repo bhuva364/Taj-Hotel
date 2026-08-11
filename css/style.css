@@ -139,3 +139,32 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 }
 .navbar__toggle span { width: 24px; height: 2px; background: var(--color-white); transition: var(--transition); }
 .navbar.is-scrolled .navbar__toggle span { background: var(--color-ink); }
+
+/* ============================================================
+   Hero — full-bleed courtyard photo, arch-shaped text panel
+   ============================================================ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 1.5rem 4rem;
+  background:
+    linear-gradient(180deg, rgba(36,20,20,0.55), rgba(36,20,20,0.75)),
+    url("https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1600&q=80") center/cover no-repeat;
+}
+.hero__arch { max-width: 720px; text-align: center; color: var(--color-white); }
+.hero__eyebrow { color: var(--color-gold); letter-spacing: 0.2em; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 1rem; display: block; }
+.hero__title { font-size: clamp(2.8rem, 6vw, 4.5rem); margin-bottom: 1.2rem; }
+.hero__subtitle { font-size: 1.05rem; color: rgba(255,255,255,0.85); max-width: 520px; margin: 0 auto 2.2rem; }
+.hero__actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.hero__scroll {
+  position: absolute;
+  bottom: 2rem; left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-white);
+  font-size: 1.4rem;
+  animation: bob 2s ease-in-out infinite;
+}
+@keyframes bob { 0%, 100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, 10px); } }
