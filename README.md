@@ -37,7 +37,7 @@ python3 -m http.server 8000
 ## Deploying to GitHub
 
 ```bash
-git remote add origin https://github.com/<your-username>/<your-repo>.git
+git remote add origin https://github.com/bhuva364/Taj-Hotel.git
 git branch -M main
 git push -u origin main
 ```
